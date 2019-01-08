@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <meta charset="utf-8" />
+        <title>Demo</title>
+        
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/countdown/jquery.countdown.css" />
+        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
+
+        
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+
+<div id='holder'>
+    <div class="row" style="position: absolute; margin-top: 200px;">
+    
+            <div id="music-left" class="music col-xs-8 col-sm-2">
+                    <ul>
+                        <li>Alan Walker - Sing Me to Sleep.mp3</li>
+                        <li>Alone.mp3</li>
+                        <li>AO - にとりたび.mp3</li>
+                        <li>Counting Stars.mp3</li>
+                        <li>Faded.mp3</li>
+                        <li>Future Funk.mp3</li>
+                        <li>IOSYS.mp3</li>
+                        <li>Journey.mp3</li>
+                        <li>Legend of Heroes.mp3</li>
+                        <li>Life.mp3</li>
+                        <li>Luv Letter.mp3</li>
+                        <li>River Flows In You.mp3</li>
+                        <li>Something Just Like This.mp3</li>
+                        <li>STEPPING ON THE RAINY STREET.mp3</li>
+                        <li>Summer Air.mp3</li>
+                        <li>You.mp3</li>
+                        <li>いきものがかり.mp3</li>
+                        <li>陈悦 - 乱红 (Live版).mp3</li>
+                        <li>聂薇 - 青螺峪.mp3</li>
+                        <li>徐梦圆 - China-X.mp3</li>
+                        <li>周深 - 大鱼.mp3</li>
+                    </ul>
+            </div> 
+
+           <div style="float: left;" class="col-xs-8 col-md-8">
+                 <div id="countdown" style="margin-top: -100px;"></div>
+                 <p id="note" style=" margin-bottom: 100px;"></p>
+                <section >
+                    <div class="musicList" >
+                        <span type="column" class="selected">柱状图</span>
+                        <span type="dot">小圆点</span>
+                    </div>
+                    <div id="box"  style="width:750px;">
+                    </div>
+                </section>
+           </div>
+            <div id="music-right" class="music col-xs-8 col-md-2">
+                    <ul>
+                        <li>卖萌表情系列</li>
+                        <li>(o゜▽゜)o☆[BINGO!]</li>
+                        <li>( *￣▽￣)((≧︶≦*)</li>
+                        <li┑(￣Д ￣)┍ 怪我咯</li>
+                        <li>ヽ(^o^)ρ┳┻┳°σ(^o^)/</li>
+                        <li>o(∩_∩)o 哈哈</li>
+                        <li>要开心呀</li>    
+                        <li>o(〃'▽'〃)o</li>
+                        <li>♪(^∇^*)</li>
+                        <li>♪(＾∀＾●)ﾉ</li>
+                        <li>⊂(˃̶͈̀ε ˂̶͈́ ⊂ )</li>
+                        <li>(⊙０⊙)</li>
+                        <li>(⊙ω⊙)</li>
+                        <li>嘻嘻ing</li>
+                        <li>(((o(*ﾟ▽ﾟ*)o)))</li>
+                        <li>( ﾉ^ω^)ﾉﾟ</li>
+                        <li>╭(′▽`)╭(′▽`)╯</li>
+                        <li>#^_^#</li>
+                        <li>(*^__^*) 嘻嘻</li>
+                        <li>(/∇＼*)｡o○</li>
+                        <li>(＾－＾)V</li>
+                        <li>(⊙ ▽ ⊙)</li>
+                        <li>(๑ºั╰╯ºั๑) </li>
+                    </ul>
+            </div>
+            <center> 
+                <div style="width:750px;">
+                    <marquee behavior="alternate" style="font-weight: bolder;font-size: 20px; color: white;">最美的期待，从梦中醒来</marquee>
+                </div> 
+            </center>
+          
+    </div>
+
+ 
+</div>   
+            <!-- JavaScript includes -->
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="assets/countdown/jquery.countdown.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script src="js/musicVisualizer.js"></script>
+    <script src="js/index.js"></script>
+
+    <script src='js/jquery.warpdrive.min.js'></script>
+    <script>
+
+        $( document ).ready( function() {
+            var hei =900;
+            var wid = $(window).width();
+            console.log(wid);
+            //------------------------------------------------------------------------
+            //Settings - params for WarpDrive
+            var settings = {
+                width: wid,
+                height: hei,
+                autoResize: false,
+                autoResizeMinWidth: null,
+                autoResizeMaxWidth: null,
+                autoResizeMinHeight: null,
+                autoResizeMaxHeight: null,
+                addMouseControls: true,
+                addTouchControls: true,
+                hideContextMenu: true,
+                starCount: 3000,
+                starBgCount: 2222,
+                starBgColor: { r:0, g:204, b:255 },
+                starBgColorRangeMin: 20,
+                starBgColorRangeMax: 80,
+                starColor: { r:0, g:204, b:255 },
+                starColorRangeMin: 50,
+                starColorRangeMax: 70,
+                starfieldBackgroundColor: { r:5, g:5, b:14 },
+                starDirection: 1,
+                starSpeed: 20,
+                starSpeedMax: 80,
+                starSpeedAnimationDuration: 2,
+                starFov: 150,
+                starFovMin: 150,
+                starFovAnimationDuration: 2,
+                starRotationPermission: true,
+                starRotationDirection: 1,
+                starRotationSpeed: 0.0,
+                starRotationSpeedMax: 0.5,
+                starRotationAnimationDuration: 2,
+                starWarpLineLength: 2.0,
+                starWarpTunnelDiameter: 100,
+                starFollowMouseSensitivity: 0.025,
+                starFollowMouseXAxis: true,
+                starFollowMouseYAxis: true
+
+            };
+
+            //------------------------------------------------------------------------
+
+            //standalone
+
+            //init
+            
+            //var warpdrive = new WarpDrive( document.getElementById( 'holder' ) );
+            var warpdrive = new WarpDrive( document.getElementById( 'holder' ), settings );
+
+            //------------------------------------------------------------------------
+
+            //jQuery
+
+            //init
+            
+            //$( '#holder' ).warpDrive();
+            //$( '#holder' ).warpDrive( settings );
+            
+            //------------------------------------------------------------------------
+
+        } );
+        
+    </script>
+
+    </body>
+</html>
+

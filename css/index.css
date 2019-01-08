@@ -1,0 +1,50 @@
+body{
+    /* background-color:#AAAEB1 */;
+}
+li{
+    list-style: none;
+}
+
+.music{
+    margin-top:0.5rem;
+}
+#box{
+    align-content: center;
+    height:30rem;
+    padding-left: 10%;
+}
+.music li{
+    cursor:pointer;
+    font-size:1.5rem;
+    color:white;
+}
+.music2 li{
+    cursor:pointer;
+    font-size:1.5rem;
+    color:white;
+}
+.musicList{
+    width:100%;
+    text-align:center;
+}
+.musicList span{
+    border-radius:0.5rem;
+    font-size:2rem;
+    cursor:pointer;
+    color:white;
+}
+.musicList .selected{
+    background-color:grey;
+    color:white;
+}
+#music-left{
+    min-height:50rem;
+    border-right:1px dotted grey;
+    float: left;
+}
+#music-right{
+    min-height:50rem;
+    border-left:1px dotted grey;
+    float: left;
+
+}
